@@ -1,0 +1,30 @@
+/* demo theming */
+
+@layer theme {
+  /* vars for the page */
+  :root {
+    --bg-page: oklch(.1 .1 180);
+    --bg-box: oklch(.5 .3 180);
+    --bg-dot: oklch(.4 .4 180);
+    --text-primary: oklch(1 0 0);
+    --font-size: .75ric;
+  }
+}
+
+@layer layout {
+  body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg-page);
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+  }
+}
+
+@layer utility {
+  [hidden],
+  .hidden {
+    display: none;
+  }
+}
